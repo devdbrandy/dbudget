@@ -1,10 +1,10 @@
 <div class="container">
   <div class="top-bar d-flex flex-column">
-    <h1>Budget Calculator</h1>
+    <h1>{{ title }}</h1>
   </div>
 
   <section class="total-budget-section d-flex flex-column">
-    <h2 class="red">1500</h2>
+    <h2 [ngClass]="{'red': totalBudget < 0, 'green': totalBudget > 0}">{{ totalBudget }}</h2>
   </section>
 </div>
 
@@ -13,6 +13,7 @@
     <app-budget-form (formSubmit)="addBudget($event)"></app-budget-form>
     <app-budget
       [budgetItems]="budgetItems"
-      (deleteItem)="deleteBudget($event)"></app-budget>
+      (deleteItem)="deleteBudget($event)"
+      (updateItem)="updateBudget($event)"></app-budget>
   </div>
 </section>

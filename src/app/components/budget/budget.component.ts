@@ -13,6 +13,7 @@ export class BudgetComponent implements OnInit {
   @Input() budgetItems: Budget[];
   @Input() budgetType: string;
   @Output() deleteItem: EventEmitter<Budget> = new EventEmitter<Budget>();
+  @Output() updateItem: EventEmitter<IBudgetUpdate> = new EventEmitter<IBudgetUpdate>();
 
   constructor(public dialog: MatDialog) { }
 
@@ -32,11 +33,19 @@ export class BudgetComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       // check if result has value
       if (result) {
-        // replace budget item with updated data from the form
-        const index = this.budgetItems.indexOf(budget);
-        this.budgetItems[index] = result;
+        this.updateItem.emit({
+          oldBudget: budget,
+          newBudget: result,
+        });
       }
+
+      // replace budget item with updated data from the form
     });
   }
 
+}
+
+export interface IBudgetUpdate {
+  oldBudget: Budget;
+  newBudget: Budget;
 }
