@@ -9,13 +9,20 @@ import { Budget } from '../../shared/models/budget.model';
   styleUrls: ['./budget-form.component.scss']
 })
 export class BudgetFormComponent implements OnInit {
-  @Input() budget: Budget = new Budget(null, '');
+  @Input() budget: Budget;
   @Output() formSubmit: EventEmitter<Budget> = new EventEmitter<Budget>();
   currency = '₦';
+  isNewBudget: boolean;
 
   constructor() { }
 
   ngOnInit() {
+    if (this.budget) {
+      this.isNewBudget = false;
+    } else {
+      this.isNewBudget = true;
+      this.budget = new Budget(null, '');
+    }
   }
 
   onSubmit(form: NgForm) {

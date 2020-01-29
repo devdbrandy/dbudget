@@ -1,5 +1,6 @@
 <li class="list-group-item d-flex justify-content-between align-items-center mt-3"
-  [ngClass]="{ 'income': budget.amount > 0, 'expense': budget.amount < 0 }">
+  [ngClass]="{ 'income': budget.amount > 0, 'expense': budget.amount < 0 }"
+  (click)="onCardClick()">
   {{ budget.description }}
   <span class="badge">{{ budget.amount }}</span>
 

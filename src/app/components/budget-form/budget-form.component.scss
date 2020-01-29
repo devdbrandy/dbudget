@@ -3,13 +3,14 @@
 form {
   margin: 2rem 0;
 
-  .col-auto {
-    width: 64%;
+  .budget-input {
+    min-width: 59%;
   }
 
   button[type=submit] {
     background: $primary-color;
     border: none;
     padding: 7px 20px;
+    margin-left: auto;
   }
 }

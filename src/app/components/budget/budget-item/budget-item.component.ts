@@ -9,7 +9,8 @@ import { Budget } from 'src/app/shared/models/budget.model';
 })
 export class BudgetItemComponent implements OnInit {
   @Input() budget: Budget;
-  @Output() deleteClick: EventEmitter<Budget> = new EventEmitter<Budget>();
+  @Output() deleteClick: EventEmitter<any> = new EventEmitter();
+  @Output() cardClick: EventEmitter<any> = new EventEmitter();
   faTimes = faTimes;
 
   constructor() { }
@@ -17,8 +18,12 @@ export class BudgetItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  onClick(budget: Budget) {
-    this.deleteClick.emit(budget);
+  onClick() {
+    this.deleteClick.emit();
+  }
+
+  onCardClick() {
+    this.cardClick.emit();
   }
 
 }

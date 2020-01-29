@@ -18,6 +18,9 @@
         name="description" required
         [ngModel]="budget.description">
     </div>
-    <button type="submit" class="btn btn-primary" [disabled]="budgetForm.invalid">Add</button>
+
+    <button type="submit" class="btn btn-primary" [disabled]="budgetForm.invalid">
+      {{ isNewBudget ? 'Add' : 'Save' }}
+    </button>
   </div>
 </form>

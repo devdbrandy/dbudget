@@ -13,6 +13,7 @@ import { BudgetItemComponent } from './components/budget/budget-item/budget-item
 import { BudgetComponent } from './components/budget/budget.component';
 import { IncomeBudgetPipe } from './pipes/income-budget.pipe';
 import { ExpenseBudgetPipe } from './pipes/expense-budget.pipe';
+import { DialogEditBudgetComponent } from './components/dialog-edit-budget/dialog-edit-budget.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { ExpenseBudgetPipe } from './pipes/expense-budget.pipe';
     BudgetItemComponent,
     IncomeBudgetPipe,
     ExpenseBudgetPipe,
+    DialogEditBudgetComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ import { ExpenseBudgetPipe } from './pipes/expense-budget.pipe';
     BrowserAnimationsModule,
     MatDialogModule,
   ],
+  entryComponents: [DialogEditBudgetComponent],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

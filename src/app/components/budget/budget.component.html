@@ -9,7 +9,8 @@
             <app-budget-item
               *ngFor="let budget of (budgetItems | incomeBudget)"
               [budget]="budget"
-              (deleteClick)="onDeleteBudget(budget)">
+              (deleteClick)="onDeleteBudget(budget)"
+              (cardClick)="openDialog(budget)">
             </app-budget-item>
           </ul>
         </div>
@@ -23,7 +24,8 @@
             <app-budget-item
               *ngFor="let budget of (budgetItems | expenseBudget)"
               [budget]="budget"
-              (deleteClick)="onDeleteBudget(budget)">
+              (deleteClick)="onDeleteBudget(budget)"
+              (cardClick)="openDialog(budget)">
             </app-budget-item>
           </ul>
         </div>
