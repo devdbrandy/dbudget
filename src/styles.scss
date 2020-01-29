@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+// global styles and variables definition
+
+@charset 'utf-8';
+
+// import google font
+@import url('https://fonts.googleapis.com/css?family=Roboto|Titillium+Web:400,600&display=swap');
+
+// colors
+$purple: #AB69C6;
+$light-purple: #CEA0E4;
+$light-grey: #C5D3E2;
+$dark: #303030;
+$green: #27AE60;
+$light-green: #8EFFC1;
+$red: #D73C2C;
+$light-red: #FF8C7C;
+$blue: #34495E;
+$light-blue: #39D5FF;
+$whitesmoke: #f9f9f9;
+
+// configs
+$font-family: 'Titillium Web', sans-serif;
+$primary-color: $purple;
+$secondary-color: $blue;
+
+* {
+  box-sizing: border-box;
+}
+
+.text-green {
+  color: $green;
+}
+
+.text-red {
+  color: $red;
+}

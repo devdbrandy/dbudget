@@ -1,0 +1,48 @@
+@import '../styles.scss';
+
+.top-bar {
+  width: 100%;
+  height: 68px;
+  background: linear-gradient(75deg, $light-purple, $light-blue);
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-family: $font-family;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $dark;
+  }
+}
+
+.total-budget-section {
+  height: 250px;
+  background: $blue;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    font-family: $font-family;
+    font-weight: 300;
+    font-size: 4rem;
+    color: white;
+
+    &.green {
+      color: lighten($green, 15%);
+    }
+
+    &.red {
+      color: lighten($red, 15%);
+    }
+  }
+}
+
+.budget-section {
+
+  .container {
+    max-width: 680px;
+  }
+
+}

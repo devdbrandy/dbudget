@@ -1,0 +1,23 @@
+<form #budgetForm="ngForm" (ngSubmit)="onSubmit(budgetForm)">
+  <div class="form-row">
+    <div class="col-3">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">{{ currency }}</div>
+        </div>
+        <label class="sr-only" for="amount">Amount</label>
+        <input type="number" class="form-control" id="amount" placeholder="Amount"
+          name="amount" required
+          [ngModel]="budget.amount">
+      </div>
+    </div>
+    <div class="col-auto budget-input">
+      <label class="sr-only" for="budget-description">Budget</label>
+      <input type="text" class="form-control" id="budget-description"
+        placeholder="Budget description..."
+        name="description" required
+        [ngModel]="budget.description">
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="budgetForm.invalid">Add</button>
+  </div>
+</form>

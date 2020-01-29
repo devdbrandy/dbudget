@@ -1,0 +1,55 @@
+@import '../../../../styles.scss';
+
+@mixin budget-theme($color) {
+  color: $color;
+
+  .badge {
+    background: $color;
+    padding: 7px;
+    color: white;
+  }
+}
+
+.income {
+  @include budget-theme($green);
+}
+
+.expense {
+  @include budget-theme($light-red);
+}
+
+.list-group-item {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+  transition: background .2s ease-out;
+
+  button.delete {
+    position: absolute;
+    background: $secondary-color;
+    color: $red;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    text-align: center;
+    right: -15px;
+    top: -15px;
+    transform: scale(0);
+    opacity: 0;
+    transition: opacity .2s ease-out, transform .2s ease-out;
+  }
+
+  &:hover {
+    background: $whitesmoke;
+
+    button.delete {
+      opacity: 1;
+      transform: scale(.8);
+
+      &:hover {
+        transform: scale(1);
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+<section class="budget-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 income">
+        <div class="income">
+          <h2>Income</h2>
+
+          <ul class="list-group">
+            <app-budget-item
+              *ngFor="let budget of (budgetItems | incomeBudget)"
+              [budget]="budget"
+              (deleteClick)="onDeleteBudget(budget)">
+            </app-budget-item>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6 expense">
+        <div class="income">
+          <h2>Expense</h2>
+
+          <ul class="list-group">
+            <app-budget-item
+              *ngFor="let budget of (budgetItems | expenseBudget)"
+              [budget]="budget"
+              (deleteClick)="onDeleteBudget(budget)">
+            </app-budget-item>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

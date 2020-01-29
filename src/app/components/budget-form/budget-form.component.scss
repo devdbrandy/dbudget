@@ -1,0 +1,15 @@
+@import '../../../styles.scss';
+
+form {
+  margin: 2rem 0;
+
+  .col-auto {
+    width: 64%;
+  }
+
+  button[type=submit] {
+    background: $primary-color;
+    border: none;
+    padding: 7px 20px;
+  }
+}
