@@ -1,12 +1,12 @@
-# Portfolio
+# DBudget Calculator
 
 A simple, minimalistic budget calculator.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
 
 ## Preview
 
-![Demo Preview 01](screenshots/screenshot_01)
-![Demo Preview 02](screenshots/screenshot_02)
+![Demo Preview 01](screenshots/screenshot_01.png)
+![Demo Preview 02](screenshots/screenshot_02.png)
 
 ## Development server
 
